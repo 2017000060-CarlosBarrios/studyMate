@@ -1,0 +1,930 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Mate | Tu espacio de estudio</title>
+
+    <meta name="description" content="Organiza tus tareas, materias y sesiones de estudio con Study Mate.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Fuente moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <div class="app-container">
+
+        <!-- BARRA LATERAL -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h2>Study<span>Mate</span></h2>
+                    <p>YOUR STUDY SPACE</p>
+                </div>
+            </div>
+
+            <div class="sidebar-label">MENÚ PRINCIPAL</div>
+
+            <nav class="navigation">
+                <a href="#inicio" class="nav-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+                </a>
+
+                <a href="#tareas" class="nav-link">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Mis tareas</span>
+                    <span class="nav-badge">3</span>
+                </a>
+
+                <a href="#materias" class="nav-link">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Mis materias</span>
+                </a>
+
+                <a href="#calendario" class="nav-link">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Calendario</span>
+                </a>
+
+                <a href="#concentracion" class="nav-link">
+                    <i class="fa-solid fa-stopwatch"></i>
+                    <span>Concentración</span>
+                </a>
+
+                <a href="#recursos" class="nav-link">
+                    <i class="fa-solid fa-images"></i>
+                    <span>Recursos</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-label tools-label">PERSONALIZACIÓN</div>
+
+            <nav class="navigation">
+                <a href="#perfil" class="nav-link">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <span>Mi perfil</span>
+                </a>
+
+                <a href="#ajustes" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configuración</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="upgrade-card">
+                    <div class="upgrade-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3>¡Sigue avanzando!</h3>
+                    <p>Cada sesión te acerca a tus objetivos.</p>
+
+                    <div class="mini-progress">
+                        <div class="mini-progress-fill"></div>
+                    </div>
+
+                    <span class="upgrade-caption">TU POTENCIAL NO TIENE LÍMITES</span>
+                </div>
+
+                <div class="sidebar-user">
+                    <div class="avatar">SM</div>
+
+                    <div class="user-info">
+                        <strong>Estudiante</strong>
+                        <span>Mi espacio personal</span>
+                    </div>
+
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content" id="inicio">
+
+            <!-- BARRA SUPERIOR -->
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <button class="icon-button menu-button" id="menuButton"
+                            aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="breadcrumb">
+                        <span>Workspace</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <strong>Dashboard</strong>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="globalSearch"
+                               placeholder="Buscar tareas, materias...">
+                        <kbd>⌕</kbd>
+                    </div>
+
+                    <button class="icon-button notification-button"
+                            id="notificationButton" aria-label="Notificaciones">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="topbar-avatar">SM</div>
+                </div>
+
+            </header>
+
+            <div class="dashboard-content">
+
+                <!-- BIENVENIDA -->
+                <section class="welcome-section">
+
+                    <div>
+                        <div class="eyebrow">
+                            <span class="status-dot"></span>
+                            TU ESPACIO DE PRODUCTIVIDAD
+                        </div>
+
+                        <h1>¡Hola, estudiante! <span class="wave">✦</span></h1>
+
+                        <p>
+                            Cada pequeño paso cuenta. Hoy es una nueva
+                            oportunidad para aprender algo increíble.
+                        </p>
+
+                        <div class="welcome-date" id="currentDate">
+                            <i class="fa-regular fa-calendar"></i>
+                            Tu jornada comienza aquí
+                        </div>
+                    </div>
+
+                    <div class="welcome-art">
+                        <div class="orbit orbit-one"></div>
+                        <div class="orbit orbit-two"></div>
+
+                        <div class="art-glow"></div>
+
+                        <div class="floating-icon floating-book">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <div class="floating-icon floating-star">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+
+                        <div class="floating-icon floating-bolt">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <div class="hero-center">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- ESTADÍSTICAS -->
+                <section class="stats-grid">
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon blue">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <span class="stat-tag">ACTIVIDAD</span>
+                        </div>
+
+                        <p class="stat-label">Tareas pendientes</p>
+                        <div class="stat-number" id="pendingCount">3</div>
+
+                        <div class="stat-footer">
+                            <span>Organiza tu día</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon purple">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <span class="stat-tag">PROGRESO</span>
+                        </div>
+
+                        <p class="stat-label">Tareas completadas</p>
+                        <div class="stat-number" id="completedCount">0</div>
+
+                        <div class="stat-footer">
+                            <span>Cada logro cuenta</span>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon cyan">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <span class="stat-tag">ENFOQUE</span>
+                        </div>
+
+                        <p class="stat-label">Minutos de estudio</p>
+                        <div class="stat-number" id="studyMinutes">0</div>
+
+                        <div class="stat-footer">
+                            <span>Tiempo invertido</span>
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                    </article>
+
+                    <article class="stat-card">
+                        <div class="stat-top">
+                            <div class="stat-icon pink">
+                                <i class="fa-solid fa-book"></i>
+                            </div>
+                            <span class="stat-tag">APRENDIZAJE</span>
+                        </div>
+
+                        <p class="stat-label">Materias activas</p>
+                        <div class="stat-number" id="subjectCount">4</div>
+
+                        <div class="stat-footer">
+                            <span>Tu conocimiento crece</span>
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </article>
+
+                </section>
+
+                <!-- TAREAS Y TEMPORIZADOR -->
+                <section class="main-grid">
+
+                    <div class="panel tasks-panel" id="tareas">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="section-kicker">ORGANIZACIÓN</span>
+                                <h2>Mis tareas <span class="title-dot">.</span></h2>
+                                <p>Todo lo que necesitas hacer, en un solo lugar.</p>
+                            </div>
+
+                            <button class="primary-button" id="addTaskButton">
+                                <i class="fa-solid fa-plus"></i>
+                                Nueva tarea
+                            </button>
+                        </div>
+
+                        <div class="task-filters" id="taskFilters">
+                            <button class="filter-button active" data-filter="all">
+                                Todas
+                            </button>
+
+                            <button class="filter-button" data-filter="pending">
+                                Pendientes
+                            </button>
+
+                            <button class="filter-button" data-filter="completed">
+                                Completadas
+                            </button>
+                        </div>
+
+                        <div class="task-list" id="taskList">
+
+                            <article class="task-item" data-status="pending">
+                                <button class="task-check" aria-label="Completar tarea">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <div class="task-details">
+                                    <h3>Terminar ejercicios de matemáticas</h3>
+                                    <p>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>Organiza tu fecha de entrega</span>
+                                    </p>
+                                </div>
+
+                                <span class="priority high">Alta</span>
+                            </article>
+
+                            <article class="task-item" data-status="pending">
+                                <button class="task-check" aria-label="Completar tarea">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <div class="task-details">
+                                    <h3>Estudiar para el examen de inglés</h3>
+                                    <p>
+                                        <i class="fa-solid fa-book-open"></i>
+                                        <span>Repasar vocabulario</span>
+                                    </p>
+                                </div>
+
+                                <span class="priority medium">Media</span>
+                            </article>
+
+                            <article class="task-item" data-status="pending">
+                                <button class="task-check" aria-label="Completar tarea">
+                                    <i class="fa-solid fa-check"></i>
+                                </button>
+
+                                <div class="task-details">
+                                    <h3>Preparar presentación de ciencias</h3>
+                                    <p>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>Organiza tus apuntes</span>
+                                    </p>
+                                </div>
+
+                                <span class="priority low">Baja</span>
+                            </article>
+
+                        </div>
+
+                        <div class="task-empty hidden" id="taskEmpty">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <h3>No hay tareas aquí</h3>
+                            <p>Agrega una tarea o prueba otro filtro.</p>
+                        </div>
+
+                        <div class="panel-footer">
+                            <span>Tu progreso empieza con una tarea.</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                    </div>
+
+                    <!-- POMODORO -->
+                    <div class="panel focus-panel" id="concentracion">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="section-kicker">MODO PRODUCTIVO</span>
+                                <h2>Focus Room <span class="title-dot">.</span></h2>
+                                <p>Un momento para concentrarte en ti.</p>
+                            </div>
+
+                            <div class="focus-status">
+                                <span class="status-dot"></span>
+                                LISTO
+                            </div>
+                        </div>
+
+                        <div class="timer-area">
+
+                            <div class="timer-ring" id="timerRing">
+                                <div class="timer-inner">
+                                    <span class="timer-label" id="timerLabel">
+                                        TIEMPO DE ESTUDIO
+                                    </span>
+
+                                    <div class="timer-display" id="timerDisplay">
+                                        25:00
+                                    </div>
+
+                                    <span class="timer-subtitle" id="timerSubtitle">
+                                        Tu concentración comienza ahora
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="timer-modes" id="timerModes">
+                            <button class="timer-mode active" data-minutes="25"
+                                    data-label="Estudio">
+                                <i class="fa-solid fa-brain"></i>
+                                Estudio
+                            </button>
+
+                            <button class="timer-mode" data-minutes="5"
+                                    data-label="Descanso corto">
+                                <i class="fa-solid fa-mug-hot"></i>
+                                Descanso
+                            </button>
+
+                            <button class="timer-mode" data-minutes="15"
+                                    data-label="Descanso largo">
+                                <i class="fa-solid fa-couch"></i>
+                                Largo
+                            </button>
+                        </div>
+
+                        <div class="timer-controls">
+                            <button class="icon-button timer-reset"
+                                    id="resetTimer" aria-label="Reiniciar temporizador">
+                                <i class="fa-solid fa-rotate-left"></i>
+                            </button>
+
+                            <button class="primary-button timer-start" id="startTimer">
+                                <i class="fa-solid fa-play"></i>
+                                Comenzar
+                            </button>
+
+                            <button class="icon-button timer-reset"
+                                    id="skipTimer" aria-label="Saltar sesión">
+                                <i class="fa-solid fa-forward-step"></i>
+                            </button>
+                        </div>
+
+                        <div class="focus-bottom">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Pequeñas sesiones, grandes resultados.</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- MATERIAS -->
+                <section class="panel subjects-panel" id="materias">
+
+                    <div class="panel-header">
+                        <div>
+                            <span class="section-kicker">TU CAMINO ACADÉMICO</span>
+                            <h2>Mis materias <span class="title-dot">.</span></h2>
+                            <p>Visualiza las áreas en las que estás trabajando.</p>
+                        </div>
+
+                        <button class="secondary-button" id="addSubjectButton">
+                            <i class="fa-solid fa-plus"></i>
+                            Nueva materia
+                        </button>
+                    </div>
+
+                    <div class="subjects-grid" id="subjectsGrid">
+
+                        <article class="subject-card subject-blue">
+                            <div class="subject-card-top">
+                                <div class="subject-icon">
+                                    <i class="fa-solid fa-calculator"></i>
+                                </div>
+                                <span class="subject-symbol">01</span>
+                            </div>
+
+                            <h3>Matemáticas</h3>
+                            <p>Números, lógica y resolución de problemas.</p>
+
+                            <div class="subject-progress-label">
+                                <span>Progreso de ejemplo</span>
+                                <strong>65%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 65%"></div>
+                            </div>
+                        </article>
+
+                        <article class="subject-card subject-purple">
+                            <div class="subject-card-top">
+                                <div class="subject-icon">
+                                    <i class="fa-solid fa-language"></i>
+                                </div>
+                                <span class="subject-symbol">02</span>
+                            </div>
+
+                            <h3>Inglés</h3>
+                            <p>Vocabulario, gramática y comunicación.</p>
+
+                            <div class="subject-progress-label">
+                                <span>Progreso de ejemplo</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </article>
+
+                        <article class="subject-card subject-cyan">
+                            <div class="subject-card-top">
+                                <div class="subject-icon">
+                                    <i class="fa-solid fa-atom"></i>
+                                </div>
+                                <span class="subject-symbol">03</span>
+                            </div>
+
+                            <h3>Ciencias</h3>
+                            <p>Descubre, experimenta y aprende.</p>
+
+                            <div class="subject-progress-label">
+                                <span>Progreso de ejemplo</span>
+                                <strong>45%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                        </article>
+
+                        <article class="subject-card subject-pink">
+                            <div class="subject-card-top">
+                                <div class="subject-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <span class="subject-symbol">04</span>
+                            </div>
+
+                            <h3>Programación</h3>
+                            <p>Ideas, algoritmos y creación digital.</p>
+
+                            <div class="subject-progress-label">
+                                <span>Progreso de ejemplo</span>
+                                <strong>55%</strong>
+                            </div>
+
+                            <div class="progress-track">
+                                <div class="progress-fill" style="width: 55%"></div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <!-- CALENDARIO Y CONSEJO -->
+                <section class="bottom-grid" id="calendario">
+
+                    <div class="panel calendar-panel">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="section-kicker">PLANIFICACIÓN</span>
+                                <h2>Mi calendario <span class="title-dot">.</span></h2>
+                            </div>
+
+                            <i class="fa-regular fa-calendar-days panel-heading-icon"></i>
+                        </div>
+
+                        <div class="calendar-heading">
+                            <button class="icon-button" id="prevMonth"
+                                    aria-label="Mes anterior">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <h3 id="calendarMonth">Calendario</h3>
+
+                            <button class="icon-button" id="nextMonth"
+                                    aria-label="Mes siguiente">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- El calendario se generará con JavaScript -->
+                        </div>
+
+                        <div class="calendar-legend">
+                            <span><i class="legend-dot blue-dot"></i> Hoy</span>
+                            <span><i class="legend-dot purple-dot"></i> Entregas</span>
+                        </div>
+
+                    </div>
+
+                    <div class="panel inspiration-panel">
+
+                        <div class="inspiration-visual">
+                            <div class="inspiration-orb">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div class="inspiration-stars">✦　·　✧</div>
+                        </div>
+
+                        <span class="section-kicker">RECORDATORIO DEL DÍA</span>
+
+                        <h2>Tu futuro se construye con lo que haces hoy.</h2>
+
+                        <p>
+                            No necesitas hacerlo todo de una vez.
+                            Elige una tarea, concéntrate y empieza.
+                        </p>
+
+                        <a href="#concentracion" class="inspiration-link">
+                            Ir a concentrarme
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <!-- GALERÍA DE RECURSOS -->
+                <div class="creative-workspace" id="creativeWorkspace">
+  <div class="creative-header">
+    <div>
+      <p class="creative-eyebrow">TU LUGAR DE IDEAS</p>
+      <h2>Mi espacio creativo ✨</h2>
+      <p>Escribe, organiza tus ideas y lleva un registro de tu aprendizaje.</p>
+    </div>
+    <span class="creative-count" id="creativeCount">0 notas</span>
+  </div>
+
+  <div class="creative-layout">
+    <form id="creativeForm" class="creative-editor">
+      <h3 id="creativeFormTitle">✏️ Crear una nota</h3>
+
+      <label for="creativeTitle">Título</label>
+      <input id="creativeTitle" type="text"
+        placeholder="Ej. Ideas para mi proyecto" maxlength="100" required>
+
+      <label for="creativeCategory">Categoría</label>
+      <select id="creativeCategory">
+        <option value="Idea">💡 Ideas</option>
+        <option value="Apuntes">📚 Apuntes</option>
+        <option value="Proyecto">🚀 Proyectos</option>
+        <option value="Diario">📖 Diario de estudio</option>
+        <option value="Personal">🌟 Personal</option>
+      </select>
+
+      <label for="creativeContent">¿Qué quieres escribir?</label>
+      <textarea id="creativeContent" rows="7"
+        placeholder="Escribe aquí tus ideas, apuntes o lo que aprendiste hoy..."
+        maxlength="10000" required></textarea>
+
+      <label for="creativeColor">Color de la nota</label>
+      <select id="creativeColor">
+        <option value="purple">Morado</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+        <option value="pink">Rosa</option>
+        <option value="orange">Naranja</option>
+      </select>
+
+      <div class="creative-form-actions">
+        <button class="creative-save" type="submit" id="creativeSave">
+          + Guardar nota
+        </button>
+        <button class="creative-cancel" type="button"
+          id="creativeCancel" hidden>
+          Cancelar edición
+        </button>
+      </div>
+
+      <p class="creative-hint" id="creativeStatus" aria-live="polite">
+        Tus notas se guardan en este navegador.
+      </p>
+    </form>
+
+    <div class="creative-board">
+      <div class="creative-tools">
+        <input id="creativeSearch" type="search"
+          placeholder="🔎 Buscar notas..." aria-label="Buscar notas">
+
+        <select id="creativeFilter" aria-label="Filtrar por categoría">
+          <option value="Todas">Todas las categorías</option>
+          <option value="Idea">Ideas</option>
+          <option value="Apuntes">Apuntes</option>
+          <option value="Proyecto">Proyectos</option>
+          <option value="Diario">Diario de estudio</option>
+          <option value="Personal">Personal</option>
+        </select>
+      </div>
+
+      <div id="creativeNotes" class="creative-notes">
+        <div class="creative-empty">
+          <span>💭</span>
+          <h3>Tu espacio está listo</h3>
+          <p>Crea tu primera nota usando el formulario.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                </section>
+
+                <!-- FORMULARIO DE CONTACTO / IDEAS -->
+                <section class="panel feedback-panel" id="perfil">
+
+                    <div class="panel-header">
+                        <div>
+                            <span class="section-kicker">TU OPINIÓN IMPORTA</span>
+                            <h2>Buzón de ideas <span class="title-dot">.</span></h2>
+                            <p>Escribe una nota para personalizar tu experiencia.</p>
+                        </div>
+                    </div>
+
+                    <form id="feedbackForm" class="feedback-form">
+
+                        <div class="form-group">
+                            <label for="studentName">¿Cómo te llamas?</label>
+                            <input type="text" id="studentName"
+                                   name="studentName"
+                                   placeholder="Tu nombre"
+                                   maxlength="60">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="feedbackType">Tipo de mensaje</label>
+                            <select id="feedbackType" name="feedbackType">
+                                <option value="idea">Una idea</option>
+                                <option value="goal">Mi objetivo de estudio</option>
+                                <option value="note">Una nota personal</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group form-full">
+                            <label for="feedbackMessage">Tu mensaje</label>
+                            <textarea id="feedbackMessage"
+                                      name="feedbackMessage"
+                                      rows="4"
+                                      maxlength="1000"
+                                      placeholder="Escribe aquí tus ideas..."></textarea>
+                        </div>
+
+                        <div class="form-actions form-full">
+                            <p id="feedbackStatus" class="form-status" aria-live="polite">
+                                Tus ideas pueden ayudarte a mejorar tu organización.
+                            </p>
+
+                            <button type="submit" class="primary-button">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                Guardar nota
+                            </button>
+                        </div>
+
+                    </form>
+
+                </section>
+
+                <!-- PIE DE PÁGINA -->
+                <footer class="footer" id="ajustes">
+                    <div class="footer-brand">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        Study<span>Mate</span>
+                    </div>
+
+                    <p>Organiza tu presente. Construye tu futuro.</p>
+
+                    <span class="footer-version">STUDY MATE · V1.0</span>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- VENTANA PARA AGREGAR TAREAS -->
+    <div class="modal-backdrop hidden" id="taskModal">
+
+        <div class="modal" role="dialog" aria-modal="true"
+             aria-labelledby="taskModalTitle">
+
+            <div class="modal-header">
+                <div>
+                    <span class="section-kicker">ORGANIZA TU TIEMPO</span>
+                    <h2 id="taskModalTitle">Nueva tarea</h2>
+                </div>
+
+                <button class="icon-button" id="closeTaskModal"
+                        aria-label="Cerrar ventana">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="taskForm">
+
+                <div class="form-group">
+                    <label for="taskTitle">Nombre de la tarea *</label>
+                    <input type="text" id="taskTitle"
+                           placeholder="Ej. Resolver ejercicios"
+                           maxlength="120" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="taskSubject">Materia</label>
+                    <select id="taskSubject">
+                        <option value="General">General</option>
+                        <option value="Matemáticas">Matemáticas</option>
+                        <option value="Inglés">Inglés</option>
+                        <option value="Ciencias">Ciencias</option>
+                        <option value="Programación">Programación</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="taskDate">Fecha de entrega</label>
+                    <input type="date" id="taskDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="taskPriority">Prioridad</label>
+                    <select id="taskPriority">
+                        <option value="high">Alta</option>
+                        <option value="medium" selected>Media</option>
+                        <option value="low">Baja</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="secondary-button"
+                            id="cancelTask">Cancelar</button>
+
+                    <button type="submit" class="primary-button">
+                        <i class="fa-solid fa-plus"></i>
+                        Crear tarea
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- VENTANA PARA AGREGAR MATERIAS -->
+    <div class="modal-backdrop hidden" id="subjectModal">
+
+        <div class="modal" role="dialog" aria-modal="true"
+             aria-labelledby="subjectModalTitle">
+
+            <div class="modal-header">
+                <div>
+                    <span class="section-kicker">TU CAMINO ACADÉMICO</span>
+                    <h2 id="subjectModalTitle">Nueva materia</h2>
+                </div>
+
+                <button class="icon-button" id="closeSubjectModal"
+                        aria-label="Cerrar ventana">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="subjectForm">
+
+                <div class="form-group">
+                    <label for="subjectName">Nombre de la materia *</label>
+                    <input type="text" id="subjectName"
+                           placeholder="Ej. Historia"
+                           maxlength="60" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjectDescription">Descripción</label>
+                    <input type="text" id="subjectDescription"
+                           placeholder="¿Qué estás aprendiendo?"
+                           maxlength="120">
+                </div>
+
+                <div class="form-group">
+                    <label for="subjectProgress">Progreso inicial</label>
+                    <select id="subjectProgress">
+                        <option value="0">0%</option>
+                        <option value="25">25%</option>
+                        <option value="50">50%</option>
+                        <option value="75">75%</option>
+                        <option value="100">100%</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="secondary-button"
+                            id="cancelSubject">Cancelar</button>
+
+                    <button type="submit" class="primary-button">
+                        <i class="fa-solid fa-plus"></i>
+                        Crear materia
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- NOTIFICACIONES -->
+    <div class="toast-container" id="toastContainer"
+         aria-live="polite" aria-atomic="true"></div>
+
+    <!-- JavaScript: lo conectaremos en el siguiente paso -->
+    <script src="script.js"></script>
+
+</body>
+</html>
